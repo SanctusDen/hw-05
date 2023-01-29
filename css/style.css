@@ -9,6 +9,7 @@
     --light-subtle-text:#8E8F99;
     --cornflower-accent:#E7E9FC;
     --color-customer:#AFB1B8;
+    --bgd-modal:#FCFCFC;
 
     /* succees */
     --success-green:#31D0AA;
@@ -57,6 +58,7 @@ body {
 .btn-hero:hover,
 .btn-hero:focus {
     background-color: var(--pressed-state);
+    color: var(--title-text-color);
 }
 
 .button{
@@ -276,6 +278,40 @@ header {
     text-align: center;
 }
 
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    width: 408px;
+    height: 576px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background: var(--bgd-modal);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.cls-button{
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 24px 24px;
+    
+}
+
 /* Information section */
 
 .information-title{
@@ -310,7 +346,7 @@ header {
     background-color: var(--button-color-on);
     fill: #2e2f42;
     border-radius: 4px;
-    background-image: url(../images/icon/noiconmoon/antenna.svg);
+    background-image: url(../images/icon/antenna.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -323,7 +359,7 @@ header {
     margin-bottom: 8px;
     background-color: var(--button-color-on);
     border-radius: 4px;
-    background-image: url(../images/icon/noiconmoon/clock.svg);
+    background-image: url(../images/icon/clock.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -336,7 +372,7 @@ header {
     margin-bottom: 8px;
     background-color: var(--button-color-on);
     border-radius: 4px;
-    background-image: url(../images/icon/noiconmoon/diagram.svg);
+    background-image: url(../images/icon/diagram.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -349,7 +385,7 @@ header {
     margin-bottom: 8px;
     background-color: var(--button-color-on);
     border-radius: 4px;
-    background-image: url(../images/icon/noiconmoon/astronaut.svg);
+    background-image: url(../images/icon/astronaut.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
