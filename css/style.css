@@ -142,6 +142,7 @@ ul,ol{
 
 header {
     border-bottom: 1px solid var(--cornflower-accent);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-portfolio{
@@ -187,11 +188,6 @@ header {
 
 /* nav */
 
-.menu:hover,:focus,:active{
-    color: var(--pressed-state);
-}
-
-
 .menu{
     color: var(--primary-text-color);
     font-weight: 500;
@@ -200,11 +196,9 @@ header {
     letter-spacing: 0.02em;
     padding: 24px 0px;
     display: block;
-    
-    
 }
 
-.menu::after{
+.activity::after{
     content: '';
     position: absolute;
     display: block;
@@ -213,14 +207,6 @@ header {
     height: 4px;
     background-color: var(--button-color-off);
     border-radius: 2px;
-
-    opacity: 0;
-    transition: opacity 250ms var(--timing-cubic);
-}
-
-.menu:hover::after,
-.menu:active{
-    opacity: 1;
 }
 
 
@@ -309,6 +295,8 @@ header {
     text-align: center;
 }
 
+/* MODAL */
+
 .backdrop{
     position: fixed;
     top: 0;
@@ -338,8 +326,19 @@ header {
     transform: translate(-50%,-50%);
 }
 
-.cls-button{
+.icon-cls{
     display: block;
+    width: 8px;
+    height: 8px;
+}
+
+.cls-button{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     margin-left: auto;
@@ -585,6 +584,7 @@ header {
 }
 
 /* Portfolio */
+
 
 .portfolio{
     padding-bottom: 120px;
