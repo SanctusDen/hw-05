@@ -198,6 +198,15 @@ header {
     display: block;
 }
 
+.studio{
+    color: var(--button-color-off);
+}
+
+.portfolioo{
+    color: var(--button-color-off);
+}
+
+
 .activity::after{
     content: '';
     position: absolute;
