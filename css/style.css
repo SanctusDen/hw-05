@@ -31,11 +31,6 @@ body {
   box-sizing: border-box;
 }
 
-*,
-*:hover,
-*:focus{
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 
 /* Button */
@@ -67,6 +62,7 @@ body {
 .btn-hero:focus {
     background-color: var(--pressed-state);
     color: var(--title-text-color);
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button{
@@ -91,12 +87,14 @@ body {
     color: var(--button-color-on);
     cursor: pointer;
     letter-spacing: 0.04em;
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
     color: var(--button-color-on);
     background: var(--button-color-off);
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
@@ -202,20 +200,21 @@ header {
     letter-spacing: 0.02em;
     padding: 24px 0px;
     display: block;
+    
 }
 
 .menu:hover,
 .menu:focus{
-    color: var(--button-color-off);
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio{
-    color: var(--button-color-off);
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolioo:hover,
 .portfolioo:focus{
-    color: var(--button-color-off);
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -268,6 +267,7 @@ header {
 
 .info:hover,:focus,:active{
     color: var(--pressed-state);
+    transition: color var(--button-color-off)  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info{
@@ -285,8 +285,6 @@ header {
     align-items: center;
     
 }
-
-
 
 
 /* section hero */
@@ -345,7 +343,15 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    
+    
+}
+
+.backdrop:hover .modal{
+    opacity: 1;
+    
 }
 
 .icon-cls{
@@ -366,7 +372,6 @@ header {
     margin-left: auto;
     margin-right: 24px;
     margin-top: 24px;
-    
     
 }
 
